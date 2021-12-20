@@ -1,9 +1,9 @@
 const Slider = ({ name, minval, maxval, setfunc, func, type }) => {
   const intlNum = new Intl.NumberFormat("en-US");
   return (
-    <div className="w-60">
-      <h2 className="flex w-100">
-        {name}: {intlNum.format(func)} {type === "currency" ? "INR" : null}
+    <div className="text-xl w-72">
+      <h2 className="mb-3">
+        {name}: {intlNum.format(func)} {type === "currency" ? "USD" : null}
         {type === "time" ? (func > 1 ? "Years" : "Year") : null}
         {type === "rate" ? "%" : null}
       </h2>
